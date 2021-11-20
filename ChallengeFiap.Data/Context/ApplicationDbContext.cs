@@ -8,21 +8,22 @@ using System.Threading.Tasks;
 
 namespace ChallengeFiap.Data.Context
 {
-    public class ApplicationDbContext : DbContext
+  public class ApplicationDbContext : DbContext
+  {
+    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+       : base(options)
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
-           : base(options)
-        {
-        }
-
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<Usuario>(entity =>
-            {
-                entity.HasIndex(u => u.Email).IsUnique();
-            });
-        }
-
-        public DbSet<Usuario> Usuario { get; set; }
     }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+      modelBuilder.Entity<Usuario>(entity =>
+      {
+        entity.HasIndex(u => u.Email).IsUnique();
+      });
+    }
+
+    public DbSet<Usuario> Usuario { get; set; }
+    public DbSet<Evento> Evento { get; set; }
+  }
 }
