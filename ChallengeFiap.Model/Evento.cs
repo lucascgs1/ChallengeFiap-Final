@@ -20,7 +20,8 @@ namespace ChallengeFiap.Model
     public List<Usuario> QuantidadePessoasTalvez { get; set; }
     public bool Gratuito { get; set; }
     public string Descricao { get; set; }
-  
+    public string Categoria { get; set; }
+
 
   }
 }

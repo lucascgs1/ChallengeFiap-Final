@@ -14,7 +14,7 @@ namespace ChallengeFiap.Api.Controllers
     {
         // GET: api/<EventController>
         [HttpGet]
-        [Route("events")]
+        [Route("eventos")]
         public IEnumerable<string> Get()
         {
             return new string[] { "value1", "value2" };
@@ -22,7 +22,7 @@ namespace ChallengeFiap.Api.Controllers
 
         // GET api/<EventController>/5
         [HttpGet]
-        [Route("event/{id}")]
+        [Route("evento/{id}")]
         public string Get(int id)
         {
             return "value";
@@ -30,20 +30,20 @@ namespace ChallengeFiap.Api.Controllers
 
         // POST api/<EventController>
         [HttpPost]
-        [Route("event/create")]
+        [Route("evento/criar")]
         public void Post([FromBody] string value)
         {
         }
 
         // PUT api/<EventController>/5
         [HttpPost]
-        [Route("event/edit")]
+        [Route("evento/editar")]
         public void Put(int id, [FromBody] string value)
         {
         }
 
         // DELETE api/<EventController>/5
-        [HttpDelete("event/delete/{id}")]
+        [HttpDelete("evento/remover/{id}")]
         public void Delete(int id)
         {
         }
