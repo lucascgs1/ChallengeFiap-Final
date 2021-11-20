@@ -16,8 +16,8 @@ namespace ChallengeFiap.Model
     public string Local { get; set; }
     public DateTime Data { get; set; }
     public int QuantidadeMaximaPessoas { get; set; }
-    public List<Usuario> QuantidadePessoasConfirmada { get; set; }
-    public List<Usuario> QuantidadePessoasTalvez { get; set; }
+    public int QuantidadePessoasConfirmada { get; set; }
+    public int QuantidadePessoasTalvez { get; set; }
     public bool Gratuito { get; set; }
     public string Descricao { get; set; }
     public string Categoria { get; set; }
