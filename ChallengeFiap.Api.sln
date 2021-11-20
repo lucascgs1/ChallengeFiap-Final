@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31515.178
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChallengeFiap.Api", "ChallengeFiap.Api\ChallengeFiap.Api.csproj", "{272F6C31-B1CC-4C47-8BE7-A308AA491B63}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChallengeFiap.Api", "ChallengeFiap.Api\ChallengeFiap.Api.csproj", "{272F6C31-B1CC-4C47-8BE7-A308AA491B63}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChallengeFiap.Model", "ChallengeFiap.Model\ChallengeFiap.Model.csproj", "{41C935E8-B9D6-4078-9917-9ED0A11A61C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChallengeFiap.Model", "ChallengeFiap.Model\ChallengeFiap.Model.csproj", "{41C935E8-B9D6-4078-9917-9ED0A11A61C0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChallengeFiap.Services", "ChallengeFiap.Services\ChallengeFiap.Services.csproj", "{ECD825CA-97BF-4A58-AAB8-02D8F1E22ADE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChallengeFiap.Services", "ChallengeFiap.Services\ChallengeFiap.Services.csproj", "{ECD825CA-97BF-4A58-AAB8-02D8F1E22ADE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChallengeFiap.Data", "ChallengeFiap.Data\ChallengeFiap.Data.csproj", "{21F84632-1FF1-47B7-9A1D-EC1631FE6A38}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChallengeFiap.Data", "ChallengeFiap.Data\ChallengeFiap.Data.csproj", "{21F84632-1FF1-47B7-9A1D-EC1631FE6A38}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChallengeFiap.Web", "ChallengeFiap.Web\ChallengeFiap.Web.csproj", "{43091530-3512-4BFB-A351-568310483371}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{21F84632-1FF1-47B7-9A1D-EC1631FE6A38}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21F84632-1FF1-47B7-9A1D-EC1631FE6A38}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21F84632-1FF1-47B7-9A1D-EC1631FE6A38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43091530-3512-4BFB-A351-568310483371}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43091530-3512-4BFB-A351-568310483371}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43091530-3512-4BFB-A351-568310483371}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43091530-3512-4BFB-A351-568310483371}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
