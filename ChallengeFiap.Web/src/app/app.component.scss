@@ -3,7 +3,20 @@
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
 }
+.example-spacer {
+  flex: 1 1 auto;
+}
 
 .header-name {
   cursor: pointer;
+}
+
+.menu-usuario {
+  cursor: pointer;
+
+  img {
+    height: auto;
+    width: 56%;
+    border-radius: 5em;
+  }
 }

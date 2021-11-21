@@ -4,7 +4,7 @@ import { CacheService } from './services/util/cache.service';
 import { HttpClienteService } from './services/util/http-cliente.service';
 import { TokenService } from './services/util/token.service';
 import { UsuarioService } from './services/usuario.service';
-import { EventosService } from './services/eventos.service';
+import { EventsService } from './services/eventos.service';
 
 // package
 import { NgModule } from '@angular/core';
@@ -27,7 +27,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
     CacheService,
     TokenService,
     UsuarioService,
-    EventosService,
+    EventsService,
   ]
 })
 export class CoreModule { }

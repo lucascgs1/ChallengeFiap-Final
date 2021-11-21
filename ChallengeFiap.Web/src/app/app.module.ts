@@ -1,5 +1,11 @@
 // pages
 import { AppComponent } from './app.component';;
+import { LoginComponent } from './pages/account/login/login.component';
+import { RegisterComponent } from './pages/account/register/register.component';
+import { ProfileComponent } from './pages/account/profile/profile.component';
+import { EventsDetailComponent } from './pages/events/events-detail/events-detail.component';
+import { EventsComponent } from './pages/events/events/events.component';
+import { MyEventComponent } from './pages/events/my-event/my-event.component';
 
 // module
 import { AppRoutingModule } from './app-routing.module';
@@ -10,12 +16,19 @@ import { CoreModule } from './core/core.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HomeComponent } from './pages/home/home.component';
+import { NotFoundComponent } from './pages/account/not-found/not-found.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    EventsDetailComponent,
+    EventsComponent,
+    MyEventComponent,
+    LoginComponent,
+    RegisterComponent,
+    ProfileComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -23,6 +36,9 @@ import { HomeComponent } from './pages/home/home.component';
     BrowserAnimationsModule,
     SharedModule,
     CoreModule,
+  ],
+  exports: [
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

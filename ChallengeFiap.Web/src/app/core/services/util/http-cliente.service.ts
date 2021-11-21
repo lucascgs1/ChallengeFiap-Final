@@ -6,8 +6,8 @@ import { CacheService } from './cache.service';
 
 // pacote
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable, of } from 'rxjs'
+import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
+import { Observable, of, throwError } from 'rxjs'
 import { switchMap } from 'rxjs/operators'
 import { TokenService } from './token.service';
 
@@ -77,7 +77,7 @@ export class HttpClienteService {
     })
       .pipe(
         switchMap(response => {
-          if (options.cacheMins > 0) {
+          if (options.cacheMins > 0 || options.cacheMins == null) {
             // Data will be cached
             this._cacheService.save({
               key: options.url,
@@ -88,5 +88,19 @@ export class HttpClienteService {
           return of<T>(response)
         })
       )
+  }
+
+  // Manipulação de erros
+  handleError(error: HttpErrorResponse): Observable<any> {
+    let errorMessage = '';
+    if (error.error instanceof ErrorEvent) {
+      // Erro ocorreu no lado do client
+      errorMessage = error.error.message;
+    } else {
+      // Erro ocorreu no lado do servidor
+      errorMessage = `Código do erro: ${error.status}, ` + `menssagem: ${error.message}`;
+    }
+    console.error(errorMessage);
+    return throwError(errorMessage);
   }
 }

@@ -52,3 +52,14 @@ export class RecuperarSenhaDTO {
   senhaNova: string;
   codigoSeguranca: string;
 }
+
+export interface Profile {
+  id: number;
+  url: string;
+  name: string;
+  nickname: string;
+  email: string;
+  password: string;
+  gender: string;
+  city: string;
+}

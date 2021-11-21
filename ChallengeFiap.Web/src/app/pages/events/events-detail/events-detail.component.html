@@ -1,0 +1,53 @@
+<div class="row mt-5">
+  <div class="col-12 col-md-8 dados-evento">
+    <div class="row">
+      <div class="col-12 titulo-evento">
+        <h3>
+          {{ event.data }}
+        </h3>
+        <h2>
+          {{ event.name }}
+        </h2>
+      </div>
+      <div class="col-12 dados-organizador">
+        <div class="row">
+          <div class="col-2">
+            <img src={{event.img_organizador}} />
+          </div>
+          <div class="col-10">
+            <h4>
+              Organizador
+            </h4>
+            <h3>
+              {{event.organization}}
+            </h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12">
+        <img class="img-evento" src={{event.img_event}} />
+      </div>
+
+      <div class="col-12 detalhe-evento">
+        <div class="titulo">
+          Detalhes
+        </div>
+        <div class="descricao">
+          {{event.description}}
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+  <div class="col-12 col-md-4 participantes">
+    <div class="titulo">
+      Participantes
+      <span> {{event.qtd_participants}} </span>
+    </div>
+    <img [src]="item.url" [matTooltip]="item.name" (click)="irPerfilUsuario(item.id)" *ngFor="let item of event.participants; index as i;" />
+
+  </div>
+</div>

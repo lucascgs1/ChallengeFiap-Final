@@ -1,3 +1,6 @@
+// components
+import { CardEventsComponent } from './components/card-events/card-events.component';
+
 // module
 import { MaterialModule } from './material/material.module';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
@@ -8,7 +11,9 @@ import { CommonModule } from '@angular/common';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    CardEventsComponent
+  ],
   imports: [
     CommonModule,
     MaterialModule,
@@ -18,6 +23,7 @@ import { CommonModule } from '@angular/common';
   exports: [
     MaterialModule,
     FormsModule,
+    CardEventsComponent
   ]
 })
 export class SharedModule { }

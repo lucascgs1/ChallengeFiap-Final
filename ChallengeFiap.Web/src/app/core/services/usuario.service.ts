@@ -1,6 +1,9 @@
 // model
 import { Usuario } from '../model/usuario';
 
+//mock
+import { events } from '../mock/events.mock';
+
 // module
 import { environment } from '../../../environments/environment';
 import { HttpClienteService } from './util/http-cliente.service';
@@ -12,6 +15,7 @@ import { retry, catchError, map } from 'rxjs/operators';
 import { Observable } from 'rxjs/internal/Observable';
 import { throwError } from 'rxjs/internal/observable/throwError';
 import { useAnimation } from '@angular/animations';
+import { of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -32,7 +36,7 @@ export class UsuarioService {
     return this.httpClient.get<Usuario[]>(environment.endPoints.usuario)
       .pipe(
         retry(2),
-        catchError(this.handleError));
+        catchError(this._http.handleError));
   }
 
 
@@ -49,32 +53,17 @@ export class UsuarioService {
 
   putCliente(usuario: Usuario): Observable<any> {
 
-    return this.httpClient.put(environment.endPoints.usuario, usuario)
+    return this._http.put({ url: environment.endPoints.usuario, body: usuario, cacheMins: 10 })
       .pipe(
         retry(2),
-        catchError(this.handleError));
+        catchError(this._http.handleError));
   }
 
   deleteClienteById(id: number): Observable<Usuario> {
 
-    return this.httpClient.delete<Usuario>(environment.endPoints.usuario + '/' + id)
+    return this._http.delete<Usuario>({ url: environment.endPoints.usuario + '/' + id, cacheMins: 0 })
       .pipe(
         retry(2),
-        catchError(this.handleError));
+        catchError(this._http.handleError));
   }
-
-  // Manipulação de erros
-  handleError(error: HttpErrorResponse): Observable<any> {
-    let errorMessage = '';
-    if (error.error instanceof ErrorEvent) {
-      // Erro ocorreu no lado do client
-      errorMessage = error.error.message;
-    } else {
-      // Erro ocorreu no lado do servidor
-      errorMessage = `Código do erro: ${error.status}, ` + `menssagem: ${error.message}`;
-    }
-    console.error(errorMessage);
-    return throwError(errorMessage);
-  }
-
 }

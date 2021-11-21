@@ -2,11 +2,14 @@
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+import { EventsService } from "../app/core/services/eventos.service";
+
 export const environment = {
   production: false,
   endPoints: {
     conta: 'url',
-    usuario: ''
+    usuario: '',
+    evento: ''
   }
 };
 
