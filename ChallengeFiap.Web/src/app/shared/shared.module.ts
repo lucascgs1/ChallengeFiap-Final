@@ -1,5 +1,4 @@
 // components
-import { CardEventsComponent } from './components/card-events/card-events.component';
 
 // module
 import { MaterialModule } from './material/material.module';
@@ -13,7 +12,6 @@ import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 
 @NgModule({
   declarations: [
-    CardEventsComponent
   ],
   imports: [
     CommonModule,
@@ -26,8 +24,6 @@ import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
-
-    CardEventsComponent,
     SweetAlert2Module,
   ]
 })

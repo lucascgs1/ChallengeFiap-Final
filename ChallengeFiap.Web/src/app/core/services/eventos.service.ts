@@ -43,4 +43,13 @@ export class EventsService {
     return this._http.get<EventDetails>({ url: environment.endPoints.evento, cacheMins: 10 })
   }
 
+
+
+  postBookEvent(idEvent: number): Observable<any> {
+
+    return of(null);
+
+    return this._http.get<any>({ url: environment.endPoints.evento, cacheMins: 10 })
+  }
+
 }

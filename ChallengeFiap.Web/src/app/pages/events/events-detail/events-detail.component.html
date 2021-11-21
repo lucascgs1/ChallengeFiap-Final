@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-12 titulo-evento">
         <h3>
-          {{ event.data }}
+          {{ event.data | date: 'dd  MMMM yyyy'}}
         </h3>
         <h2>
           {{ event.name }}
@@ -29,7 +29,7 @@
         <img class="img-evento" src={{event.img_event}} />
       </div>
 
-      <div class="col-12 detalhe-evento">
+      <div class="col-12 detalhe-evento" >
         <div class="titulo">
           Detalhes
         </div>
@@ -37,17 +37,22 @@
           {{event.description}}
         </div>
       </div>
-
     </div>
 
 
   </div>
   <div class="col-12 col-md-4 participantes">
-    <div class="titulo">
-      Participantes
-      <span> {{event.qtd_participants}} </span>
+    <div class="row">
+      <div class="col-12 d-grid gap-2 mb-4">
+          <button class="btn btn-primary" type="button" (click)="openDialog()">Participar</button>
+      </div>
+      <div class="col-12">
+        <div class="titulo">
+          Participantes
+          <span> {{event.qtd_participants}} </span>
+        </div>
+        <img [src]="item.url" [matTooltip]="item.name" (click)="irPerfilUsuario(item.id)" *ngFor="let item of event.participants; index as i;" />
+      </div>
     </div>
-    <img [src]="item.url" [matTooltip]="item.name" (click)="irPerfilUsuario(item.id)" *ngFor="let item of event.participants; index as i;" />
-
   </div>
 </div>

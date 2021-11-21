@@ -10,4 +10,8 @@
     <None Remove="node_modules\**" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="src\app\shared\components\" />
+  </ItemGroup>
+
 </Project>

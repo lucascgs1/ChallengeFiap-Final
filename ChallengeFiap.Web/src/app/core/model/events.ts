@@ -34,3 +34,7 @@ export interface MyEvents {
   local: string;
   data: string;
 }
+
+export interface EventBooking {
+
+}

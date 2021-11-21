@@ -3,8 +3,9 @@ import { AppComponent } from './app.component';;
 import { LoginComponent } from './pages/account/login/login.component';
 import { RegisterComponent } from './pages/account/register/register.component';
 import { ProfileComponent } from './pages/account/profile/profile.component';
-import { EventsDetailComponent } from './pages/events/events-detail/events-detail.component';
 import { EventsComponent } from './pages/events/events/events.component';
+import { EventsDetailComponent } from './pages/events/events-detail/events-detail.component';
+import { EventsBookingComponent } from './pages/events/events-booking/events-booking.component';
 import { MyEventComponent } from './pages/events/my-event/my-event.component';
 
 // module
@@ -30,7 +31,8 @@ import { IConfig, NgxMaskModule } from 'ngx-mask';
     LoginComponent,
     RegisterComponent,
     ProfileComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    EventsBookingComponent
   ],
   imports: [
     BrowserModule,

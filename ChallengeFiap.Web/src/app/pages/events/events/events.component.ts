@@ -6,6 +6,7 @@ import { EventsService } from '../../../core/services/eventos.service';
 
 // package
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-events',
@@ -16,7 +17,9 @@ export class EventsComponent implements OnInit {
   public evento: any[] = [];
 
   constructor(
-    public eventsService: EventsService
+    public eventsService: EventsService,
+    private activatedRoute: ActivatedRoute,
+    private router: Router,
   ) { }
 
   ngOnInit(): void {
@@ -35,5 +38,9 @@ export class EventsComponent implements OnInit {
       )
 
       ;
+  }
+
+  goDetails(id: number) {
+    this.router.navigate(['events/' + id]);
   }
 }
