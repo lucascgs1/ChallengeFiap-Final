@@ -18,6 +18,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NotFoundComponent } from './pages/account/not-found/not-found.component';
 import { RouterModule } from '@angular/router';
+import { IConfig, NgxMaskModule } from 'ngx-mask';
+
 
 @NgModule({
   declarations: [
@@ -36,6 +38,7 @@ import { RouterModule } from '@angular/router';
     BrowserAnimationsModule,
     SharedModule,
     CoreModule,
+    NgxMaskModule.forRoot({ dropSpecialCharacters: false }),
   ],
   exports: [
     RouterModule

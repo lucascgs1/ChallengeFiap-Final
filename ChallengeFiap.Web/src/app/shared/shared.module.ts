@@ -8,6 +8,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 // package
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 
 
 @NgModule({
@@ -19,11 +20,15 @@ import { CommonModule } from '@angular/common';
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
+    SweetAlert2Module.forRoot(),
   ],
   exports: [
     MaterialModule,
     FormsModule,
-    CardEventsComponent
+    ReactiveFormsModule,
+
+    CardEventsComponent,
+    SweetAlert2Module,
   ]
 })
 export class SharedModule { }
