@@ -1,5 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+// services
 import { UsuarioService } from '../../../core/services/usuario.service';
+
+// package
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-profile',
