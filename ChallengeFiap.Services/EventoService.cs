@@ -37,9 +37,15 @@ namespace ChallengeFiap.Services
       return _eventoService.ListarEventos(id);
     }
 
+    public bool RemoverEventos(long id)
+    {
+      var evento = _eventoService.FindFirstBy(x => x.Id == id);
+      return _eventoService.RemoverEventos(evento);
+    }
+
     public bool RemoverEventos(Evento evento)
     {
-      return _eventoService.RemoverEventos(evento);
+      throw new NotImplementedException();
     }
   }
 }

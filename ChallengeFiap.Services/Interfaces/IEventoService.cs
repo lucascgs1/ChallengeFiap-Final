@@ -12,7 +12,7 @@ namespace ChallengeFiap.Services.Interfaces
     bool CriarEvento(Evento evento);
     IEnumerable<Evento> ListarEventos();
     Evento ListarEventos(long id);
-    bool RemoverEventos(Evento evento);
+    bool RemoverEventos(long id);
     bool EditarEvento(Evento evento);
   }
 }
