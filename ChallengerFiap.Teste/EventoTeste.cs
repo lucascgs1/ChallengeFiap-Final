@@ -27,8 +27,7 @@ namespace ChallengerFiap.Teste
       evento.Descricao = "Evento de teste da fiap";
       evento.Nome = "Challanger fiap";
       evento.QuantidadeMaximaPessoas = 100;
-      evento.QuantidadePessoasConfirmada = 0;
-      evento.QuantidadePessoasTalvez = 0;
+
 
       var resultado = _eventoService.CriarEvento(evento);
 
