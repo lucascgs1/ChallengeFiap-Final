@@ -1,16 +1,13 @@
-﻿using System;
+﻿using ChallengeFiap.Model;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
-namespace ChallengeFiap.Model
+namespace ChallengeFiap.Api.Model
 {
-  public class Evento
+  public class EventoViewModel
   {
-
-    [Key]
     public long Id { get; set; }
     public string Nome { get; set; }
     public string Local { get; set; }
@@ -21,7 +18,5 @@ namespace ChallengeFiap.Model
     public string Descricao { get; set; }
     public string Categoria { get; set; }
     public string Organizador { get; set; }
-
-
   }
 }
