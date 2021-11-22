@@ -104,8 +104,8 @@ namespace ChallengeFiap.Api.Controllers
     }
 
 
-    [HttpDelete("evento/remover/{id}")]
-    [Route("evento/editar")]
+    [HttpDelete]
+    [Route("evento/remover/{id}")]
     public ActionResult Delete([FromServices] IEventoService eventoService, long id)
     {
       try
