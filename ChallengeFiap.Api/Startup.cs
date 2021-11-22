@@ -7,6 +7,9 @@ using Microsoft.Extensions.DependencyInjection;
 
 using ChallengeFiap.Data.Context;
 using ChallengeFiap.Api.Configure;
+using Microsoft.Extensions.PlatformAbstractions;
+
+using System.IO;
 
 namespace ChallengeFiap.Api
 {
@@ -27,6 +30,26 @@ namespace ChallengeFiap.Api
       services.AddCors();
       services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
       services.AddControllers();
+      //services.AddSwaggerGen(c =>
+      //{
+      //  c.SwaggerDoc("v1",
+      //      new Microsoft.OpenApi.Models.OpenApiInfo
+      //      {
+      //        Title = "Challenger Fiap",
+      //        Version = "v1",
+      //        Description = "Api para um sistema de criação de eventos para mulheres"
+      //      });
+
+      //  string caminhoAplicacao =
+      //      PlatformServices.Default.Application.ApplicationBasePath;
+      //  string nomeAplicacao =
+      //      PlatformServices.Default.Application.ApplicationName;
+      //  string caminhoXmlDoc =
+      //      Path.Combine(caminhoAplicacao, $"{nomeAplicacao}.xml");
+
+      //  c.IncludeXmlComments(caminhoXmlDoc);
+      //});
+   
       services.AddSwaggerSetup();
       services.RegisterServices();
     }
@@ -62,7 +85,12 @@ namespace ChallengeFiap.Api
         endpoints.MapControllers();
       });
 
-      app.UseSwaggerSetup();
+      app.UseSwagger();
+      app.UseSwaggerUI(c =>
+      {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json",
+            "Challenger Fiap");
+      });
     }
   }
 }
