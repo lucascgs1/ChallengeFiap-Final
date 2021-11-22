@@ -9,10 +9,11 @@ namespace ChallengeFiap.Services.Interfaces
 {
   public interface IEventoService
   {
-    bool CriarEvento(Evento evento);
+    Evento CriarEvento(Evento evento);
     IEnumerable<Evento> ListarEventos();
     Evento ListarEventos(long id);
     bool RemoverEventos(long id);
-    bool EditarEvento(Evento evento);
+    Evento EditarEvento(Evento evento);
+    Evento AdicionarParticipanteEvento(Participante participante);
   }
 }

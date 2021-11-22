@@ -9,10 +9,7 @@ namespace ChallengeFiap.Data.Interfaces
 {
   public interface IEventoRepository : IRepository<Evento>
   {
-    bool CriarEvento(Evento evento);
-    IEnumerable<Evento> ListarEventos();
-    Evento ListarEventos(long id);
     bool RemoverEventos(Evento evento);
-    bool EditarEvento(Evento evento);
+
   }
 }

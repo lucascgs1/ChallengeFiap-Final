@@ -56,6 +56,8 @@ namespace ChallengeFiap.Api.Controllers
       try
       {
         Evento ev = new Evento();
+
+
         ev.Categoria = request.Categoria;
         ev.Data = request.Data;
         ev.Descricao = request.Descricao;
@@ -63,7 +65,7 @@ namespace ChallengeFiap.Api.Controllers
         ev.Local = request.Local;
         ev.Nome = request.Nome;
         ev.Organizador = request.Organizador;
-        ev.Participantes = request.Participantes;
+        ev.Participantes = request.Participantes != null ? request.Participantes : new List<Participante>();
         ev.QuantidadeMaximaPessoas = request.QuantidadeMaximaPessoas;
 
         return Ok(eventoService.CriarEvento(ev));
