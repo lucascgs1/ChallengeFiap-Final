@@ -3,9 +3,7 @@ using ChallengeFiap.Model;
 using ChallengeFiap.Services.Interfaces;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace ChallengeFiap.Services
 {
@@ -34,7 +32,12 @@ namespace ChallengeFiap.Services
 
     public Evento ListarEventos(long id)
     {
-      return _eventoService.ListarEventos(id);
+      var evento = _eventoService.ListarEventos(id);
+
+      if (evento == null)
+        throw new Exception("Evento não encontrado!");
+
+      return evento;
     }
 
     public bool RemoverEventos(long id)
@@ -43,9 +46,5 @@ namespace ChallengeFiap.Services
       return _eventoService.RemoverEventos(evento);
     }
 
-    public bool RemoverEventos(Evento evento)
-    {
-      throw new NotImplementedException();
-    }
   }
 }

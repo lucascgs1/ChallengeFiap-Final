@@ -1,9 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
-
 using ChallengeFiap.Model;
 using ChallengeFiap.Data.Interfaces;
 using ChallengeFiap.Services.Interfaces;
-
 using System;
 using System.Threading.Tasks;
 using System.Collections.Generic;
