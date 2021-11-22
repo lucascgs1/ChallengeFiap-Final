@@ -1,0 +1,32 @@
+<p>
+  <mat-toolbar color="primary">
+    <span routerLink="" style="cursor:pointer;">Pokemon</span>
+    <span class="example-spacer"></span>
+    <!--<button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button>-->
+    <div _ngcontent-sau-c33="" class="menu-usuario" [matMenuTriggerFor]="menuUsuario">
+      <img src="https://secure.meetupstatic.com/photos/member/9/6/4/f/thumb_273338479.jpeg" style=" ">
+    </div>
+  </mat-toolbar>
+</p>
+
+
+<mat-menu #menuUsuario="matMenu">
+  <button mat-menu-item routerLink="account/profile">
+    <mat-icon>person</mat-icon>
+    <span>Perfil</span>
+  </button>
+  <button mat-menu-item routerLink="my-events">
+    <mat-icon>schedule</mat-icon>
+    <span>Meus eventos</span>
+  </button>
+  <button mat-menu-item routerLink="my-events">
+    <mat-icon>exit_to_app</mat-icon>
+    <span>Sair</span>
+  </button>
+</mat-menu>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
