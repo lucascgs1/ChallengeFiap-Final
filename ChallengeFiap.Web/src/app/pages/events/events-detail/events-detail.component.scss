@@ -14,7 +14,7 @@
     h2 {
       margin-bottom: 0;
       font-size: 2em;
-      color: #333333;
+      color: #32186b;
       font-weight: 500;
     }
   }
@@ -58,10 +58,12 @@
     padding-top: 20px;
 
     .titulo {
+      color:#32186b;
       font-size: 1em;
       font-weight: 500;
       margin-bottom: 18px;
       text-transform: capitalize;
+      
     }
 
     .descricao {
@@ -105,9 +107,9 @@
     span {
       font-weight: 400;
       margin-left: 1em;
-      background-color: #adadad;
-      color: white;
-      border-radius: 13px;
+      background-color: #ffc1c1;
+      color: #32186b;
+      border-radius: 24px;
       padding: 7px;
     }
   }
