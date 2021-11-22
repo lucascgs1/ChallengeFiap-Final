@@ -43,8 +43,13 @@
   </div>
   <div class="col-12 col-md-4 participantes">
     <div class="row">
-      <div class="col-12 d-grid gap-2 mb-4">
-          <button class="btn btn-primary" type="button" (click)="openDialog()">Participar</button>
+      <div class="col-12">
+        <div class="info-event">
+          <p>Saturday, November 27, 2021<br>
+          9:45 AM to 3:45 PM EST</p>
+          <p>Staten Island Ferry Terminal<br>
+          · New York, NY</p>
+        </div>
       </div>
       <div class="col-12">
         <div class="titulo">
@@ -52,6 +57,9 @@
           <span> {{event.qtd_participants}} </span>
         </div>
         <img [src]="item.url" [matTooltip]="item.name" (click)="irPerfilUsuario(item.id)" *ngFor="let item of event.participants; index as i;" />
+      </div>
+      <div class="col-12 d-grid gap-2 mb-4 button-space">
+        <button class="btn participar-button" type="button" (click)="openDialog()">Participar</button>
       </div>
     </div>
   </div>
