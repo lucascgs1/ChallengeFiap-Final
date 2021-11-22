@@ -20,7 +20,19 @@ namespace ChallengeFiap.Data
 
     public bool CriarEvento(Evento evento)
     {
-      Db.Evento.Add(evento);
+
+      var entity = Db.Evento.FirstOrDefault(x => x.Id == evento.Id);
+
+      entity.Local = evento.Local;
+      entity.Nome = evento.Nome;
+      entity.Organizador = evento.Organizador;
+      entity.Participantes = evento.Participantes;
+      entity.QuantidadeMaximaPessoas = evento.QuantidadeMaximaPessoas;
+      entity.Gratuito = evento.Gratuito;
+      entity.Descricao = evento.Descricao;
+      entity.Categoria = evento.Categoria;
+      entity.Data = evento.Data;
+            
       var resultado = Db.SaveChanges();
 
       if (resultado > 0)
@@ -53,7 +65,7 @@ namespace ChallengeFiap.Data
     public bool RemoverEventos(Evento evento)
     {
       Db.Evento.Remove(evento);
-     var resultado = Db.SaveChanges();
+      var resultado = Db.SaveChanges();
 
       if (resultado > 0)
         return true;
