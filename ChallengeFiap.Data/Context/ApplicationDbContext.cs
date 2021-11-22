@@ -25,5 +25,7 @@ namespace ChallengeFiap.Data.Context
 
     public DbSet<Usuario> Usuario { get; set; }
     public DbSet<Evento> Evento { get; set; }
+    public DbSet<Estado> Estado { get; set; }
+    public DbSet<Cidade> Cidade { get; set; }
   }
 }

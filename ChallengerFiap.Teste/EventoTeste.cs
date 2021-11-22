@@ -40,7 +40,7 @@ namespace ChallengerFiap.Teste
 
       var resultado = _eventoService.CriarEvento(evento);
 
-      Assert.IsTrue(resultado);
+      Assert.IsNotNull(resultado);
     }
 
     [Test]
@@ -80,7 +80,7 @@ namespace ChallengerFiap.Teste
 
       var resultado = _eventoService.EditarEvento(evento);
 
-      Assert.IsTrue(resultado);
+      Assert.IsNotNull(resultado);
 
     }
 
