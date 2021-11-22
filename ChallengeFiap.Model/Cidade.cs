@@ -11,6 +11,7 @@ namespace ChallengeFiap.Model
   {
     [Key]
     public int Id { get; set; }
+    public int EstadoId { get; set; }
     public string Nome { get; set; }
   }
 }
