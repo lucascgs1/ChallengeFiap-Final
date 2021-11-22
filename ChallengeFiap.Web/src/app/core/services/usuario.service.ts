@@ -1,8 +1,9 @@
 // model
-import { Usuario } from '../model/usuario';
+import { Profile, Usuario } from '../model/usuario';
 
 //mock
 import { events } from '../mock/events.mock';
+import { userProfile } from '../mock/profile.mock';
 
 // module
 import { environment } from '../../../environments/environment';
@@ -31,8 +32,10 @@ export class UsuarioService {
     return this._http.get<Usuario>({ url: environment.endPoints.usuario + '/' + id, cacheMins: 10 })
   }
 
-  getAllUsuario(): Observable<Usuario[]> {
 
+
+  getAllUsuario(): Observable<Usuario[]> {
+    
     return this.httpClient.get<Usuario[]>(environment.endPoints.usuario)
       .pipe(
         retry(2),
@@ -62,6 +65,17 @@ export class UsuarioService {
   deleteClienteById(id: number): Observable<Usuario> {
 
     return this._http.delete<Usuario>({ url: environment.endPoints.usuario + '/' + id, cacheMins: 0 })
+      .pipe(
+        retry(2),
+        catchError(this._http.handleError));
+  }
+
+
+  getUserProfile(): Observable<Profile> {
+
+    return of(userProfile)
+
+    return this._http.get<Usuario[]>({ url: '', cacheMins: 15 })
       .pipe(
         retry(2),
         catchError(this._http.handleError));

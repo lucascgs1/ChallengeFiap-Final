@@ -1,6 +1,6 @@
 import { Profile } from "../model/usuario";
 
-export const profile: Profile = {
+export const userProfile: Profile = {
   id: 2,
   url: "https://github.com/lucascgs1.png",
   name: "Lucas Coutinho",
