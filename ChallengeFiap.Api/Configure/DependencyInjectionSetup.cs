@@ -17,12 +17,15 @@ namespace ChallengeFiap.Api.Configure
             #region repositorios
 
             services.AddScoped<IUsuarioRepository, UsuarioRepository>();
+            services.AddScoped<IEventoRepository, EventoRepository>();
 
             #endregion repositorios
 
             #region servicos
 
             services.AddTransient<IUsuarioServices, UsuarioServices>();
+            services.AddTransient<IUsuarioServices, UsuarioServices>();
+            services.AddTransient<IEventoService, EventoService>();
 
             #endregion servicos
         }
