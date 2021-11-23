@@ -2,12 +2,16 @@
   <div class="col-12">
     <div class="row">
       <div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3 card-login">
-        <div class="col-12 titulo">
-          Login
+        <div class="col-12 titulo-login">
+          Log in<br><br>
+          <span class="cadastrar">
+            Não tem conta? <a routerLink="register">Cadastrar-se</a>
+          </span>
         </div>
+        
         <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
           <div class="col-12 mb-4 form-group">
-            <label for="email" class="control-label">Email:</label>
+            <label for="email" class="control-label label-login">Email:</label>
             <input type="email" class="form-control" formControlName="email" placeholder="cadastro@silph.com" id="email" (change)="validateEmail($event)" [ngClass]="{'is-invalid': ((loginForm.controls['email'].touched || isSubmited) && loginForm.value.email == '' || isEmailValid)}">
             <!--<div *ngIf="(loginForm.controls['email'].touched || isSubmited) && (loginForm.value.email == '' || isEmailValid)" class="invalid-feedback">
               <div class="" *ngIf="loginForm.controls['email'].errors != null && loginForm.controls['email'].errors.['required']">
@@ -20,7 +24,7 @@
           </div>
 
           <div class="col-12 form-group">
-            <label for="senha" class="control-label">senha:</label>
+            <label for="senha" class="control-label label-login">senha:</label>
             <input type="password" class="form-control" formControlName="senha" placeholder="******" [ngClass]="{'is-invalid': ((loginForm.controls['senha'].touched || isSubmited) && loginForm.value.senha == '')}">
             <!--<div *ngIf="(loginForm.controls['senha'].touched || isSubmited) && loginForm.value.senha == ''" class="invalid-feedback">
               <div class="" *ngIf="loginForm.controls['senha'].errors != null && loginForm.controls['senha'].errors.['required']">
@@ -32,10 +36,7 @@
 
           <div class="col-12 mt-2 mb-4 form-group" style=" position: relative;">
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" formControlName="lembrar" id="lembrar">
-              <label class="form-check-label" for="lembrar">
-                Lembrar-me
-              </label>
+              
             </div>
 
             <a class="esqueci-senha" routerLink="account/recover-pass">
@@ -44,8 +45,7 @@
           </div>
 
           <div class="col-12 mb-2 d-grid gap-2">
-            <button type="submit" class="btn btn-primary btn-block">Entrar</button>
-            <button class="btn btn-secondary btn-block" (click)="irCadastro()">Cadastro</button>
+            <button type="submit" class="btn btn-block btn-login">Entrar</button>
           </div>
         </form>
       </div>
