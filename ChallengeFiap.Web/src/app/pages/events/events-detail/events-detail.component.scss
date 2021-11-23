@@ -22,7 +22,7 @@
   .dados-organizador {
     img {
       width: 100%;
-      padding: 1em;
+      padding: 1.5em;
       border-radius: 5em;
     }
 
@@ -45,7 +45,7 @@
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-      color:#888888;
+      color: #888888;
     }
   }
 
@@ -58,12 +58,11 @@
     padding-top: 20px;
 
     .titulo {
-      color:#32186b;
+      color: #32186b;
       font-size: 1em;
       font-weight: 500;
       margin-bottom: 18px;
       text-transform: capitalize;
-      
     }
 
     .descricao {
