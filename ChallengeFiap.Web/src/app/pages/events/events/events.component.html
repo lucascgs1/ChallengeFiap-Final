@@ -1,11 +1,19 @@
 <div class="row">
-  <div class="col-12 col-md-6">
-    ola fulano,
+  <div class="col-12 col-md-6 call-to-action">
+    <h1>Olá {{profile.nickname}},</h1>
+    <p>Junte-se aos eventos que estão acontecendo<br> praticamente em qualquer lugar.</p>
   </div>
 
-  <div class="col-12 col-md-6" >
-    <img src="../../../../assets/img/undraw_events_re_98ue.svg" style="width:72%;margin:100px 0;"/>
+  <div class="col-12 col-md-6 call-to-action-image">
+    <img src="../../../../assets/img/undraw_before_dawn_re_hp4m.svg" style="width:90%;margin:100px 0;"/>
   </div>
+
+  <div class="col-12">
+    <div class="titulo-evento-home">
+      Eventos que combinam com você:
+    </div>
+  </div>
+
   <div class="col-12 col-md-6 col-lg-4" *ngFor="let item of evento">
     <div class="card-evento" (click)="goDetails(item.id)">
       <div class="imagem-evento" [ngStyle]="{'background-image': 'url(' + item.img_event + ')'}"></div>

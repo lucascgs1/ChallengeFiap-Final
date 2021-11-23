@@ -1,3 +1,42 @@
+.call-to-action {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+
+  h1 {
+    font-size: 50px;
+    line-height: 56px;
+    font-weight: 500;
+    color: #32186b;
+    margin-bottom: 0.25em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  p {
+    color: #32186b;
+    font-size: 22px;
+    line-height: 30px;
+  }
+}
+
+.call-to-action-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.titulo-evento-home {
+  color: #32186b;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 500;
+  margin: 20px 0px 18px;
+  text-transform: capitalize;
+}
+
 .card-evento {
   padding: 1em;
   color: #727272;
